@@ -1,38 +1,69 @@
+:root{
+  --button-color: #E46643;
+  --button-highlight: #F39765;
+  --header-color: #2B2D31;
+  --burger-hover-color: var(--button-color);
+  --burger-idle-color: #35393F;
+  --sidebar-color: #1D1F22;
+}
+
+.light{
+  --button-color: #E46643;
+  --button-highlight: #F39765;
+  --header-color: #2B2D31;
+  --burger-hover-color: var(--button-color);
+  --burger-idle-color: #35393F;
+  --sidebar-color: #1D1F22;
+  --preview-and-markdown-header-color: #F5F5F5;
+  --preview-and-markdown-header-text-color:rgb(128, 128, 128);
+  --preview-and-markdown-background-color: #FFFFFF;
+  --markdown-text-color:#4b4b4b;
+  --markdown-border-color:rgb(204, 204, 204);
+  --overlay-color:rgba(51, 51, 51, 0.226);
+  --modal-title-color:#000;
+  --modal-background-color:#FFFFFF;
+}
+
+.dark{
+  --button-color: #E46643;
+  --button-highlight: #F39765;
+  --header-color: #2B2D31;
+  --burger-hover-color: var(--button-color);
+  --burger-idle-color: #35393F;
+  --sidebar-color: #1D1F22;
+  --preview-and-markdown-header-color:#1D1F22;
+  --preview-and-markdown-header-text-color:rgb(179, 179, 179);
+  --preview-and-markdown-background-color:#151619;
+  --markdown-text-color:rgb(180, 180, 180);
+  --markdown-border-color:rgb(70, 70, 70);
+  --overlay-color:rgba(255, 255, 255, 0.226);
+  --modal-title-color:#fff;
+  --modal-background-color:#151619;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  position: relative;
+  width: 100%;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  overflow: hidden;
 }
 
-.App-link {
-  color: #61dafb;
+.overlay{
+  position: absolute;
+  background:var(--overlay-color);
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 100;
+  transition: all 200ms linear;
+  visibility: hidden;
+  opacity: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.overlay.show{
+  opacity: 1;
+  visibility: visible;
 }
+

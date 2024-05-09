@@ -1,0 +1,98 @@
+.sidebar{
+    min-width: 250px;
+    display: none;
+    background-color: #1D1F22;
+    padding: 0px 20px;
+    position: relative;
+ }
+
+ .sidebar.show{
+  display: block;
+ }
+
+ .markdown-logo{
+    margin-top: 35px;
+    padding: 0px 0;
+}
+
+.document{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px 0px;
+}
+  
+ 
+.document-info .document-name{
+   color: white;
+   font-weight: 400;
+}
+ 
+.document-date{
+   color: rgb(97, 97, 97);
+   font-size: small;
+   margin-bottom: 5px;
+}
+ 
+.sidebar h5{
+   color: gray;
+   padding: 25px 0px;
+   letter-spacing: 2px;
+}
+ 
+ 
+.light-mode{
+   position: absolute;
+   display: flex;
+   gap: 10px;
+   bottom: 15px;
+ }
+ 
+.toggler-container{
+   background-color: rgb(104, 104, 104);
+   width: 35px;
+   height: 17px;
+   border-radius: 10px;
+   padding: 4px 5px;
+   cursor: pointer;
+}
+ 
+.toggler{
+   background-color: white;
+   width: 9px;
+   height: 9px;
+   border-radius: 50%;
+   transition: all 200ms linear;
+}
+ 
+.toggler.light{
+   transform: translateX(0px);
+}
+ 
+.toggler.dark{
+   transform: translateX(15px);
+}
+ 
+.sidebar button{
+   padding: 13px 0px;
+   width: 100%;
+   color: white;
+   background-color: var(--button-color);
+   border: none;
+   border-radius: 3px;
+   margin-bottom: 10px;
+}
+ 
+.sidebar button:hover{
+   cursor: pointer;
+   background-color: var(--button-highlight);
+}
+ 
+
+.moon-icon-container.active{
+   filter: invert(100%) sepia(19%) saturate(1%) hue-rotate(30deg) brightness(105%) contrast(101%);
+}
+
+.sun-icon-container.active{
+   filter: invert(100%) sepia(19%) saturate(1%) hue-rotate(30deg) brightness(105%) contrast(101%);
+}

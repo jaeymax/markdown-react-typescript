@@ -1,0 +1,46 @@
+
+
+.preview{
+    flex: 1;
+    /* background-color: rgb(17, 17, 17); */
+    background: #151619;
+}
+
+.preview{
+    position: relative;
+    display: block;
+}
+
+.preview .preview-icon-container{
+    transition: none;
+}
+
+.preview .preview-icon-container:hover{
+    cursor: pointer;
+    filter: invert(60%) sepia(48%) saturate(4750%) hue-rotate(335deg) brightness(95%) contrast(88%);
+}
+
+.wmde-markdown{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 40px;
+    overflow-y: scroll;
+  }
+  
+  
+.wmde-markdown::-webkit-scrollbar{
+    width: 5px;
+    display: none;
+}
+  
+.wmde-markdown::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+  
+.wmde-markdown::-webkit-scrollbar-thumb{
+    background-color: #888;
+    border-radius: 10px;
+}

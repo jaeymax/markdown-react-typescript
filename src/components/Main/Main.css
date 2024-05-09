@@ -1,0 +1,19 @@
+.main{
+    display: flex;
+    flex: 1;
+}
+  
+.heading{
+    background: var(--preview-and-markdown-header-color);
+    padding: 8px 15px;
+    color: var(--preview-and-markdown-header-text-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 40px;
+  }
+  
+.heading h6{
+    letter-spacing: 3px;
+}
+  

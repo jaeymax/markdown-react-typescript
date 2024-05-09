@@ -1,0 +1,135 @@
+.header{
+    display: flex;
+    align-items: center;
+    background-color: #2B2D31;
+    height: 60px;
+}
+  
+.header-right{
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    flex: 1;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.delete-icon-container{
+    transition: none;
+}
+
+.delete-icon-container:hover{
+    filter: invert(60%) sepia(48%) saturate(4750%) hue-rotate(335deg) brightness(95%) contrast(88%);
+    cursor: pointer;
+}
+
+.icon-menu-container{
+    padding:10px 15px;
+    height: 100%;
+    background-color:#35393F;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+.icon-menu-container:hover{
+    cursor: pointer;
+    background-color: var(--button-color);
+    transition: none;
+}
+  
+.markdown-logo-container{
+    padding: 5px 20px;
+    border-right: 1px solid gray;
+    display: block;
+}
+
+
+.document-details{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex: 1;
+}
+  
+.document-name{
+    font-weight: 300;
+    color: gray;
+    font-size: small;
+    display: block;
+}
+  
+.doc-name{
+    color: white;
+    font-weight: 300;
+    font-size: small;
+    /* border-bottom: 1px solid white; */
+    background: transparent;
+    border: none;
+    outline-width: 0;
+    padding: 5px 0px;
+}
+
+.doc-name:hover{
+    cursor: pointer;
+    border-bottom: 1px solid white;
+}
+
+.doc-name:focus{
+    border-bottom: 1px solid white;
+}
+
+.save{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+  
+.save button{
+    display: flex;
+    gap: 5px;
+    padding: 9px 15px;
+    color: white;
+    background-color: var(--button-color);
+    border: none;
+    border-radius: 3px;
+}
+  
+.save p{
+     display: block;
+}
+  
+.save button{
+    transition: none;
+}
+
+.save button:hover{
+    cursor: pointer;
+    background-color: var(--button-highlight);
+}
+  
+
+/* For tablet screens */
+@media screen and (max-width:768px) {
+    .markdown-logo-container{
+        display: none;
+    }
+
+
+}
+
+
+/* For mobile screens */
+@media screen and (max-width:375px) {
+    .save p{
+        display: none;
+    }
+
+    .document-name{
+        display: none;
+    }
+}
