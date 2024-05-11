@@ -1,9 +1,6 @@
-
-
 .preview{
     flex: 1;
-    /* background-color: rgb(17, 17, 17); */
-    background: #151619;
+    background: var(--preview-and-markdown-background-color);
 }
 
 .preview{
@@ -20,16 +17,72 @@
     filter: invert(60%) sepia(48%) saturate(4750%) hue-rotate(335deg) brightness(95%) contrast(88%);
 }
 
+
 .wmde-markdown{
     position: absolute;
-    width: 100%;
     left: 0;
     right: 0;
     bottom: 0;
     top: 40px;
     overflow-y: scroll;
-  }
-  
+    max-width: 1000px;
+    margin: auto;
+}
+ 
+.wmde-markdown p, .wmde-markdown ul, .wmde-markdown ol{
+    color: var(--preview-paragraph-color);
+}
+
+.markdown-preview{
+    padding: 0 100px;
+}
+
+.wmde-markdown  blockquote{
+    background-color: var(--blockquote-bg-color);
+    color: var(--blockquote-text-color);
+    border-radius: 3px;
+    padding: 25px 20px;
+    border-left: 0.25em solid var(--button-color);
+    font-weight: 600;
+}  
+
+.wmde-markdown blockquote p{
+    color: var(--blockquote-text-color);
+}
+
+.wmde-markdown blockquote a{
+    color: var(--blockquote-link-color);
+    text-decoration: underline;
+}
+
+.wmde-markdown-color{
+    background-color: var(--preview-and-markdown-background-color);
+    
+}
+
+.wmde-markdown h2{
+    font-weight: 300;
+}
+
+.wmde-markdown h1, .wmde-markdown h2{
+    border-bottom: none;
+}
+
+.wmde-markdown h1, .wmde-markdown h2, .wmde-markdown h3, .wmde-markdown h4, .wmde-markdown h5, .wmde-markdown h6{
+    color: var(--preview-heading-color);
+}
+
+ul li::marker{
+    color: var(--button-color);
+}
+
+#code-blocks{
+    color: var(--button-color);
+}
+
+.code-highlight{
+    background-color: var(--blockquote-bg-color) !important;
+}
   
 .wmde-markdown::-webkit-scrollbar{
     width: 5px;

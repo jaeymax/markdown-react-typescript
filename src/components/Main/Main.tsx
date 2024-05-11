@@ -7,7 +7,6 @@ import './Main.css'
 const Main = () => {
   const {showPreview} = useAppContext();
   const [isSmallScreen, setIsSmallScreen] = useState(false);
-  const [markdownText, setMarkdownText] = useState('');
 
   useEffect(()=>{
         const handleResize = () =>{
@@ -23,9 +22,9 @@ const Main = () => {
 
   return (
     <div className='main' >
-      {isSmallScreen?(showPreview?<Preview markdownText = {markdownText} />:<Markdown markdownText = {markdownText} setMarkdownText={setMarkdownText} />):(<>
-          {!showPreview && <Markdown markdownText = {markdownText} setMarkdownText = {setMarkdownText} />}
-          <Preview markdownText = {markdownText }/>
+      {isSmallScreen?(showPreview?<Preview />:<Markdown />):(<>
+          {!showPreview && <Markdown/>}
+          <Preview/>
       </>)}
     </div>
   )

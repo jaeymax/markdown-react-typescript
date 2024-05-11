@@ -1,17 +1,21 @@
-import { useState } from 'react';
 import EyeIcon from '../../assets/icon-show-preview.svg'
 import EyeIconClosed from '../../assets/icon-hide-preview.svg'
 import './Markdown.css';
 import { useAppContext } from '../../context/AppProvider';
+import { useEffect, useRef } from 'react';
 
-interface MarkDownProps{
-  markdownText:string,
-  setMarkdownText:(text:string)=>void;
-}
 
-const Markdown = (props:MarkDownProps) => {
 
-  const {showPreview, updatePreview} = useAppContext();
+const Markdown = () => {
+
+  const {showPreview, updatePreview, markdown, updateMarkdown} = useAppContext();
+  const textAreaRef = useRef<HTMLTextAreaElement>(null);
+  
+  useEffect(()=>{
+      if(textAreaRef != null){
+        textAreaRef.current?.focus();
+      }
+  }, [markdown]);
 
   return (
     <div className='mkdown' >
@@ -24,7 +28,7 @@ const Markdown = (props:MarkDownProps) => {
 
         </div>
         <div className="mkdown-text-area">
-            <textarea spellCheck = {false} name="md-text-area" value={props.markdownText} onChange={(e)=>props.setMarkdownText(e.target.value)} id="md-text-area"></textarea>
+            <textarea ref ={textAreaRef} spellCheck = {false} name="md-text-area" value={markdown} onChange={(e)=>updateMarkdown(e.target.value)} id="md-text-area"></textarea>
         </div>
     </div>
   )

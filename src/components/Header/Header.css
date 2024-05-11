@@ -3,6 +3,7 @@
     align-items: center;
     background-color: #2B2D31;
     height: 60px;
+    /* width: 100%; */
 }
   
 .header-right{
@@ -55,6 +56,11 @@
     align-items: center;
     flex: 1;
 }
+
+.document-details > :last-child{
+    /* background-color: blue;
+    min-width: 100px; */
+}
   
 .document-name{
     font-weight: 300;
@@ -67,11 +73,12 @@
     color: white;
     font-weight: 300;
     font-size: small;
-    /* border-bottom: 1px solid white; */
     background: transparent;
     border: none;
     outline-width: 0;
     padding: 5px 0px;
+    width: 150px;
+
 }
 
 .doc-name:hover{

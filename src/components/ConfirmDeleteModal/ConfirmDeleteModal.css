@@ -36,6 +36,6 @@
     cursor: pointer;
 }
   
-.modal button:active{
+.modal button:hover{
     background-color: var(--button-highlight);
 }

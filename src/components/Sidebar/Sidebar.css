@@ -15,12 +15,7 @@
     padding: 0px 0;
 }
 
-.document{
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    padding: 10px 0px;
-}
+
   
  
 .document-info .document-name{

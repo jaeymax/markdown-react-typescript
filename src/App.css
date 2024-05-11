@@ -22,6 +22,11 @@
   --overlay-color:rgba(51, 51, 51, 0.226);
   --modal-title-color:#000;
   --modal-background-color:#FFFFFF;
+  --blockquote-bg-color: var(--preview-and-markdown-header-color);
+  --blockquote-text-color: #000;
+  --blockquote-link-color:#000;
+  --preview-heading-color:#000;
+  --preview-paragraph-color:rgb(114, 114, 134);
 }
 
 .dark{
@@ -39,6 +44,11 @@
   --overlay-color:rgba(255, 255, 255, 0.226);
   --modal-title-color:#fff;
   --modal-background-color:#151619;
+  --blockquote-bg-color: var(--header-color);
+  --blockquote-text-color:#ffffff;
+  --blockquote-link-color:#ffffff;
+  --preview-heading-color:#ffffff;
+  --preview-paragraph-color:#c9d1d9;
 }
 
 .App {

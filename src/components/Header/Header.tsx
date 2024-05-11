@@ -8,9 +8,67 @@ import CloseButton from '../../assets/icon-close.svg';
 import './Header.css';
 import { useAppContext } from "../../context/AppProvider";
 
+
 const Header = () => {
 
-  const {showMenu, updateMenu, showModal, updateModal} = useAppContext();
+  const {showMenu, updateMenu,documentId, showModal,updateDocuments, updateModal,documents, documentName, updateDocumentName, markdown} = useAppContext();
+
+  const handleSave = () =>{
+      
+    let newDocArray = [...documents];
+
+    //Check if document with same name already exists
+    if(documents.find(doc=>doc.name === documentName)){
+        
+        newDocArray = newDocArray.filter(doc=>doc.name !== documentName);
+
+        const newDocument = {
+            id:documentId,
+            name:documentName,
+            content:markdown,
+            createdAt:new Date().getDate().toString() +'-'+ new Date().getMonth().toString() +'-'+ new Date().getFullYear().toString()
+        }
+      
+        newDocArray.push(newDocument);
+    }
+    else{
+
+
+        //Check if a document with same id already exists
+        if(documents.find(doc=>doc.id === documentId)){
+            //In this case it is an update
+            const newDocument = {
+                id:documentId,
+                name:documentName,
+                content:markdown,
+                createdAt:new Date().getDate().toString() +'-'+ new Date().getMonth().toString() +'-'+ new Date().getFullYear().toString()
+            }
+
+            newDocArray = newDocArray.filter(doc=>doc.id !== documentId); //remove the old document
+            newDocArray.push(newDocument); //update it with the existing one
+        }
+        else{
+            //In this case it is a create operation
+            const newDocument = {
+                id:documentId,
+                name:documentName,
+                content:markdown,
+                createdAt:new Date().getDate().toString() +'-'+ new Date().getMonth().toString() +'-'+ new Date().getFullYear().toString()
+            }
+
+            newDocArray.push(newDocument);
+        }
+
+
+        //updateDocumentId(new Date().toUTCString());
+    }
+
+
+
+    localStorage.setItem('documents', JSON.stringify(newDocArray));
+    updateDocuments(newDocArray);
+    
+  }
 
   return (
     <div className='header' >
@@ -29,7 +87,7 @@ const Header = () => {
                 <div>
                     <p className='document-name'>Document Name</p>
                     {/* <p className='doc-name' >welcome.md</p> */}
-                    <input type="text" className="doc-name" />
+                   <input type="text" className="doc-name" value={documentName} onChange={(e)=>updateDocumentName(e.target.value)} />
                 </div>
             </div>
             <div className="save">
@@ -37,7 +95,7 @@ const Header = () => {
                     
                     <img  className='hoverable' src={DeleteIcon} alt="" />
                 </div>
-                <button>
+                <button onClick={()=>{handleSave()}} >
                     <div className='save-icon-container' >
                         <img src={IconSave} alt="" />
                     </div>

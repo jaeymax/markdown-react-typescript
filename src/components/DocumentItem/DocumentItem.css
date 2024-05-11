@@ -1,11 +1,31 @@
+.document{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 10px;
+    transition: none;
+}
 
+/* .document:hover{
+    cursor: pointer;
+    background-color: var(--header-color);
+    border-radius: 3px;
+} */
 
-.document-info .document-name{
+.sidebar-document-name{
     color: white;
     font-weight: 400;
+    transition: none;
 }
+
+.sidebar-document-name:hover{
+    color: var(--button-color);
+    cursor: pointer;
+}
+
+
   
-.document-date{
+.sidebar-document-date{
     color: rgb(97, 97, 97);
     font-size: small;
     margin-bottom: 5px;
