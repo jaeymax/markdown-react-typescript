@@ -26,7 +26,7 @@ const Header = () => {
             id:documentId,
             name:documentName,
             content:markdown,
-            createdAt:new Date().getDate().toString() +'-'+ new Date().getMonth().toString() +'-'+ new Date().getFullYear().toString()
+            createdAt:new Date().toDateString()
         }
       
         newDocArray.push(newDocument);
@@ -41,7 +41,7 @@ const Header = () => {
                 id:documentId,
                 name:documentName,
                 content:markdown,
-                createdAt:new Date().getDate().toString() +'-'+ new Date().getMonth().toString() +'-'+ new Date().getFullYear().toString()
+                createdAt:new Date().toDateString()
             }
 
             newDocArray = newDocArray.filter(doc=>doc.id !== documentId); //remove the old document
@@ -53,7 +53,7 @@ const Header = () => {
                 id:documentId,
                 name:documentName,
                 content:markdown,
-                createdAt:new Date().getDate().toString() +'-'+ new Date().getMonth().toString() +'-'+ new Date().getFullYear().toString()
+                createdAt:new Date().toDateString()
             }
 
             newDocArray.push(newDocument);

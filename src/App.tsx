@@ -7,10 +7,14 @@ import { useAppContext } from './context/AppProvider';
 
 function App() {
 
-  const {theme, showModal} = useAppContext();
+  const {theme, showModal, updateModal} = useAppContext();
+
+  const handleClick = () =>{
+     if(showModal)updateModal(false);
+  }
 
   return (
-    <div className={`App ${theme}`}>
+    <div className={`App ${theme}` } onClick={handleClick} >
       {/* {showModal && <div className="overlay"></div>} */}
       <div className={`overlay ${showModal?'show':''}`}></div>
       <Sidebar/>
