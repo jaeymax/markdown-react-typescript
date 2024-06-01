@@ -3,7 +3,6 @@
     align-items: center;
     background-color: #2B2D31;
     height: 60px;
-    /* width: 100%; */
 }
   
 .header-right{
@@ -57,10 +56,6 @@
     flex: 1;
 }
 
-.document-details > :last-child{
-    /* background-color: blue;
-    min-width: 100px; */
-}
   
 .document-name{
     font-weight: 300;

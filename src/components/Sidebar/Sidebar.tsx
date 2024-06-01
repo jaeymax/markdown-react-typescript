@@ -37,7 +37,7 @@ const Sidebar = () => {
                 documents.map((doc,index)=><DocumentItem key={doc.id} id = {doc.id} createdAt = {doc.createdAt} content = {doc.content} name = {doc.name} />)
             }
         
-         {/* <DocumentItem  key={1} createdAt='21 june 2021' content='# Wecome to markdown' name='untitled.md'/> */}
+         
         </div>
         <div className="light-mode">
             <div className={`moon-icon-container  ${theme==='dark'?'active':''}`}>

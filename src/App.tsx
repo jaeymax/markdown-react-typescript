@@ -15,7 +15,6 @@ function App() {
 
   return (
     <div className={`App ${theme}` } onClick={handleClick} >
-      {/* {showModal && <div className="overlay"></div>} */}
       <div className={`overlay ${showModal?'show':''}`}></div>
       <Sidebar/>
       <div className="container">

@@ -9,9 +9,6 @@
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
+  font-size: 15px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}

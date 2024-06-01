@@ -59,3 +59,10 @@
 
 
 }
+
+/* show scroll bar only on desktop devices */
+@media screen and (min-width:767px) {
+    #md-text-area::-webkit-scrollbar{
+        display: block;
+    }
+}

@@ -66,7 +66,7 @@ const AppProvider:React.FC<AppContextProviderProps> = ({children}) => {
       let data = localStorage.getItem('documents');
     
       if(data){
-         //console.log(JSON.parse(data));
+        
          setDocuments(JSON.parse(data));
       }
   },[])

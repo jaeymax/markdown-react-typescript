@@ -60,7 +60,6 @@ const Header = () => {
         }
 
 
-        //updateDocumentId(new Date().toUTCString());
     }
 
 
@@ -86,7 +85,7 @@ const Header = () => {
                 </div>
                 <div>
                     <p className='document-name'>Document Name</p>
-                    {/* <p className='doc-name' >welcome.md</p> */}
+                   
                    <input type="text" className="doc-name" value={documentName} onChange={(e)=>updateDocumentName(e.target.value)} />
                 </div>
             </div>

@@ -97,3 +97,10 @@ ul li::marker{
     background-color: #888;
     border-radius: 10px;
 }
+
+/* show scroll bar only on desktop devices */
+@media screen and (min-width:767px) {
+    .wmde-markdown::-webkit-scrollbar{
+        display: block;
+    }
+}

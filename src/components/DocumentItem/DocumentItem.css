@@ -6,12 +6,6 @@
     transition: none;
 }
 
-/* .document:hover{
-    cursor: pointer;
-    background-color: var(--header-color);
-    border-radius: 3px;
-} */
-
 .sidebar-document-name{
     color: white;
     font-weight: 400;
